@@ -18,14 +18,20 @@ if enable_logging:
     utils.check_if_dir_exists(log_info)
     utils.check_if_dir_exists(log_error)
 
-# Params section
+# Params Section
 
 production = cfg['Params'].getboolean('production')
-description = cfg['Params'].get('description')
+
+# App Section
+
+description = cfg['App'].get('description')
+
+
+# CSV Section
 
 excel_bom = cfg['Csv'].getboolean('excel_bom')
 
-excel_columns = cfg['App'].get('excel_columns')
+excel_columns = cfg['Csv'].get('excel_columns')
 
 if excel_columns:
     excel_columns = excel_columns.split(",")
