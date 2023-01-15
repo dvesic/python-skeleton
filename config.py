@@ -35,9 +35,17 @@ else:
 
 def read_cmd_parameters():
     # Parsing command line
-    global description
+    global description, production, enable_logging
+
     parser = argparse.ArgumentParser(description=description)
 
     parser.add_argument('-p', '--production', action='store_true', help='Production mode')
+    parser.add_argument('-l', '--logging-off', action='store_true', help='Disable logging')
 
     args = parser.parse_args()
+
+    if args.production:
+        production = True
+
+    if args.logging_off:
+        enable_logging = False

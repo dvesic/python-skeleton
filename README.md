@@ -20,5 +20,12 @@ This is done along with https://github.com/dvesic/perfect-python-4-windows - ple
 ## Files
 
 - *config.ini* - configuration file; set specific parameters in [App] section and add code to retrieve them in
-*config.py* file
-- *main.py* - main file; this is where you start your project
+*config.py* file. Set at least *description* parameter.
+- *main.py* - main file; this is where you start your project; set __author__ and __version__ variables 
+
+## Logging
+
+Basic logging is done over *file_logging.py* file. It logs *info* and *error* messages to *logs/* folder.
+
+You can change actual locations of log files in *config.ini* file, [Logs] section. You can also turn off logging there
+as well, or over command line 

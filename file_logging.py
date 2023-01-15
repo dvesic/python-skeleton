@@ -6,7 +6,7 @@ logger = None
 
 def get_logger(info_file, error_file):
 
-    logger_instance = logging.getLogger('mobi')
+    logger_instance = logging.getLogger('logger')
     logger_instance.setLevel(logging.DEBUG)
     logger_instance.addHandler(logging.StreamHandler())
 
